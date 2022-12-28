@@ -24,8 +24,8 @@ const Navbar = () => {
 
                 </ul>
                 <div className="items-center flex-shrink-0 hidden lg:flex">
-                    <button className="self-center px-8 py-3 rounded">Sign in</button>
-                    <button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Sign up</button>
+                    <button className="self-center px-8 py-3 rounded"><Link to="/login">Sign in</Link></button>
+                    <button to="/signup" className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900"><Link to="/signup">Sign up</Link></button>
                 </div>
                 <button className="p-4 lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-100">
