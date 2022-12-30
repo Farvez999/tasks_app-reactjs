@@ -1,9 +1,10 @@
 import React from 'react';
+import AddTasks from './Tasks/AddTasks';
 
 const Home = () => {
     return (
         <div>
-            <h1>Home Page</h1>
+            <AddTasks></AddTasks>
         </div>
     );
 };

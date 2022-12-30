@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import { useToken } from '../../hooks/useToken';
 
 const SignUp = () => {
 
@@ -12,7 +13,7 @@ const SignUp = () => {
     const [signUpError, setSignUpError] = useState('');
 
     const [createUserEmail, setCreateUserEmail] = useState('')
-    // const [token] = useToken(createUserEmail)
+    const [token] = useToken(createUserEmail)
     console.log(user)
 
     const googleProvider = new GoogleAuthProvider();
@@ -23,9 +24,9 @@ const SignUp = () => {
     let from = location.state?.from?.pathname || "/";
 
 
-    // if (token) {
-    //     navigate('/')
-    // }
+    if (token) {
+        navigate('/')
+    }
 
     const handleSignUp = data => {
         console.log(data)
@@ -57,7 +58,7 @@ const SignUp = () => {
 
     const saveUserDasboard = (name, email) => {
         const user = { name, email };
-        fetch('http://localhost:5000/users', {
+        fetch('https://tasks-app-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
