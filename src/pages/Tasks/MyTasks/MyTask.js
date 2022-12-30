@@ -80,7 +80,7 @@ const MyTask = () => {
     }
 
     return (
-        <div className='min-h-screen w-4/6 mx-auto mt-20 mb-20'>
+        <div className='min-h-screen w-5/6 mx-auto mt-10 mb-10'>
             {myTasks?.length === 0 ?
                 <h1 className='text-4xl text-center my-20 text-black'>Don't have any Task. Please First Add a task </h1>
                 : <h1 className='text-4xl text-center my-20 text-black'>Total Task: {myTasks?.length} </h1>

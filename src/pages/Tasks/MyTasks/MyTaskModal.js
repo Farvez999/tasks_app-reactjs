@@ -70,7 +70,7 @@ const MyTaskModal = ({ handleOpen, open, task, refetch }) => {
                                 >
                                     <span>Cancel</span>
                                 </Button>
-                                <Button type='submit' variant="gradient" color="green">
+                                <Button className='bg-green-500' type='submit' variant="gradient" color="green">
                                     <span>{loader ?
                                         'Processing...' : 'Confirm'}</span>
                                 </Button>
