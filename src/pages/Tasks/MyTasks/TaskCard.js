@@ -38,9 +38,9 @@ const TaskCard = ({ task, handelCompleted, handelDelete, handleOpen }) => {
                 <div className='flex gap-2'>
                     <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-yellow-500 dark:bg-violet-400 dark:text-gray-900" onClick={() => handleOpen(task)}>update</button>
 
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-red-500 dark:bg-violet-400 dark:text-gray-900" onClick={() => handleOpen(task)}>Delete</button>
+                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-red-500 dark:bg-violet-400 dark:text-gray-900" onClick={() => handelDelete(task._id)}>Delete</button>
 
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-green-500 dark:bg-violet-400 dark:text-gray-900" onClick={() => handleOpen(task)}>Completed</button>
+                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-green-500 dark:bg-violet-400 dark:text-gray-900" onClick={() => handelCompleted(task._id)}>Completed</button>
                 </div>
             </div>
         </div>
